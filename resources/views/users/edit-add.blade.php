@@ -42,7 +42,7 @@
                             <div class="form-group">
                                 <label for="name">{{ __('voyager::generic.name') }}</label>
                                 <input type="text" class="form-control" id="name" name="username" placeholder="{{ __('voyager::generic.name') }}"
-                                       value="{{ old('username', $dataTypeContent->name ?? '') }}">
+                                       value="{{ old('username', $dataTypeContent->username ?? '') }}">
                             </div>
 
                             <div class="form-group">
