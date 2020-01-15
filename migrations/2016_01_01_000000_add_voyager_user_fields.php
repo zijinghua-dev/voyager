@@ -10,6 +10,10 @@ class AddVoyagerUserFields extends Migration
     public function up()
     {
         Schema::table('users', function ($table) {
+            $table->dropColumn('name');
+            $table->dropColumn('email');
+            $table->uuid('uuid');
+            $table->string('username')->unique();
             if (!Schema::hasColumn('users', 'avatar')) {
                 $table->string('avatar')->nullable()->after('username')->default('users/default.png');
             }
